@@ -1,5 +1,6 @@
 //git config --global core.autocrlf true
-
+//git rm -r --cached node_modules //git commit -m 'Remove the now ignored directory node_modules'
+//git rm --cached .env
 require('dotenv').config();
 const express = require('express');
 const app = express();
