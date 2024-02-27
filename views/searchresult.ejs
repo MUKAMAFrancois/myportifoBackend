@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="./css/search.css">
+</head>
+<body>
+    <h1>Your Search Results</h1>
+    <main class="main_search">
+<% blogs.forEach(blog => { %>
+      <a href="/blog/<%= blog._id %>" class="single_result_search">
+        <img src="<%= blog.image %>" alt="" class="home_image">
+        <div class="search_result">
+            <h2><%= blog.title %></h2>
+            <h4 class="author"><%= blog.author %></h4>
+        </div>
+        <h3 class="updated-at"><%= blog.updatedAt.toLocaleString() %></h3>
+    </a>
+
+<% }) %>
+
+    </main>   
+</body>
+</html>

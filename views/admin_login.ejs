@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/admin_.css">
+</head>
+<body>
+    <style>
+        .warning-message {
+            color: #8b0707;
+            text-align: center;
+            margin-bottom: 24px;
+            font-weight: 'bold';
+            font-family: 'Aref Ruqaa', serif;
+        }
+    </style>
+<main>
+
+    <div class="login-container">
+        <div class="warning-message"></div>
+        <h2>Login to Dashboard</h2>
+        <form action="/adminLogin" method="POST">
+            <div class="input-container">
+                <label for="email" class="label">Email:</label>
+                <input type="email" name="email" id="email_dashboard" placeholder="Your Admin Email">
+            </div>
+            <div class="input-container">
+                <label for="password" class="label">Password:</label>
+                <input type="password" name="password" id="password_dashboard" placeholder="Your Admin Password">
+            </div>
+            <a class="forgot_password" href="">Forgot Password?</a>
+        
+            <button  class="login-btn" id="login_to_dashboard"  type="submit">Login</button>
+           
+        </form>
+</main>
+</body>
+</html>

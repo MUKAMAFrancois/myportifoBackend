@@ -1,0 +1,759 @@
+<style>
+    
+/* ===============PROFILE.CSS================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Roboto:wght@100;400;500;700;900&display=swap');
+
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background:#6e6e6e;
+    --links_color:#067BC2;
+    --buttons_color:#BCFD4C;
+    --text_color:#000;
+    --icons_color:#F24E1E;
+    --side_dashboard_color:#DEDEDE;
+}
+
+body{
+    font-family:'Inknut Antiqua', serif;
+    background-color: var(--background);
+    color: var(--text_color);
+    height: 100vh;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+    display: block;
+    cursor: pointer;
+}
+a:hover{
+    color: var(--links_color);
+}
+a:focus{
+    color:var(--icons_color);
+}
+    main{
+        padding: 20px 5%;
+        display: flex;
+    }
+
+    .left-section{
+        flex-basis: 30%;
+        position: fixed;
+        left:0;
+        top:0;
+        bottom:0;
+        background: var(--side_dashboard_color);
+        height: 100vh;
+        padding:20px;
+        z-index: 100;
+        padding-bottom: 50px;
+    }
+
+    .left-section h1{
+        text-transform: uppercase;
+        color:#F24E1E;
+    }
+
+    .left-section .single-div{
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #000;
+        padding:10px 0;
+    }
+
+    .single-div .icon-container{
+        width:50px;
+        height: 50px;
+        border:1px solid #000;
+        border-radius: 30px;
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon-container img{
+        width:40px;
+        height: 40px;
+
+    }
+
+    .image-container{
+    width: 60px;
+    height: 60px;
+    }
+
+  .image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .text-container p{
+    margin:0;
+    padding:0;
+  }
+
+
+  .right-section{
+    flex-basis: 65%;
+    background-color: #fff;
+    position: relative;
+    left:320px;
+    top:100px;
+    padding:20px;
+    border-radius: 20px;
+    height: auto;
+  }
+  .update-profile-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #username{
+   padding:12px;
+   margin-left: 10px;
+   border-radius: 10px;
+  }
+
+  .pic{
+    display: flex;
+    margin:20px 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .username-input{
+    margin:40px 0;
+  }
+
+  .pic input[type="image"] {
+    width: 200px;
+    padding:18px;
+    margin-right: 10px; 
+    border-radius: 10px; 
+    border:2px solid #000;
+    margin-left: 20px;
+
+}
+
+.add-img-btn,.remove-btn{
+ border-radius: 20px;
+ border:none;
+
+}
+
+
+.pic img{
+    width:20px;
+    height: 20px;
+}
+
+.pic input{
+    margin-left: 70px;
+}
+
+.save-btn{
+    padding: 5px 20px;
+    border-radius: 10px;
+    background-color: var(--buttons_color);
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 20px;
+    border:none;
+    font-family: 'Inknut Antiqua', serif;
+}
+
+.save-btn:hover{
+    background-color: #fff;
+    color: #000;
+    border: 2px solid var(--buttons_color);
+}
+
+
+/* ===========Add New Blog========== */
+
+
+.right-section-add-blog{
+    flex-basis: 65%;
+}
+
+.add-new-blog-container{
+    flex-basis:65%;
+    position: relative;
+    width:600px;
+    top:200px;
+    left:320px;
+    background-color: #fff;
+    padding:20px 10px;
+    border-radius: 20px;
+    /* height: 300px; */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    padding-left: 30px;
+}
+
+.add-new-blog-container h1{
+    /* margin-bottom: 50px; */
+    text-transform: uppercase;
+    font-size: 28px;
+}
+.add-new-blog-container>div{
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+.add-new-blog-container>div a img{
+    margin-top:10px;
+    margin-left:30px;
+}
+.search-container{
+    position: fixed;
+    top:30px;
+    left:380px;
+    display: flex;
+    z-index: 20;
+    border-bottom: 2px solid #333;
+   
+}
+.search{
+    background: #fff;
+    padding:5px 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 500px;
+}
+
+.search input{
+    padding: 5px;
+    border:none;
+    outline:none;
+    font-size: 24px;
+    
+}
+
+.search img{
+    padding-top:7px;
+}
+
+
+
+.search-btn{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border:none;
+    padding: 1px 24px;
+    background: var(--buttons_color);
+    font-family: 'Inknut Antiqua', sans-serif;
+    font-weight: 700;
+}
+
+.search-btn:hover{
+    background: #fff;
+    border: 2px solid var(--buttons_color);
+}
+
+
+
+/* ================TYPE A BLOG============== */
+
+.blog-list-add-update-container{
+    position: relative;
+}
+
+.login-container{
+
+    flex-basis:65%;
+    position: relative;
+    width:600px;
+    top:50px;
+    left:200px;
+    background-color: #fff;
+    padding:20px 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    height: auto;
+    color:#000;
+    margin-bottom: 70px;
+
+}
+
+.add-new-blog-form{
+    flex-basis:65%;
+    position: relative;
+    width:600px;
+    top:120px;
+    left:10px;
+    bottom:50px;
+    background-color: #fff;
+    padding:20px 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    height: auto;
+    color:#000;
+
+}
+.add-new-blog-form{
+    display: none;
+}
+
+.written-blogs-list{
+
+    flex-basis:65%;
+    position: absolute;
+    width:100%;
+    top:10px;
+    left:0;
+    padding:20px 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    height: auto;
+    color:#000;
+}
+
+.update-blog-form{
+    position: absolute;   
+    flex-basis:65%;
+    width:90%;
+    top:10px;
+    left:0;
+    padding:20px 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    height: auto;
+    color:#000;
+    background: var(--icons_color);
+}
+
+.update-blog-form{
+    display: none;
+}
+.post-btn,.login-btn,.save_updates_btn{
+   padding: 10px 20px;
+
+    border-radius: 10px;
+    background-color: var(--buttons_color);
+    color: #000;
+    font-weight: 700;
+    width: 20%;
+    cursor: pointer;
+    margin: 20px auto;
+    border:none;
+    font-family: 'Inknut Antiqua', serif;
+}
+#login_to_dashboard{
+    padding: 10px 20px;
+}
+.login-btn{
+    text-align: center;
+}
+
+
+.post-btn:hover,.login-btn:hover,.save_updates_btn:hover{
+    background-color: #fff;
+    color: #000;
+    border: 2px solid var(--buttons_color);
+}
+
+.label {
+    width: 100px; 
+}
+
+.input-container,.input-update-container  {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.input-container input[type="text"],
+.input-update-container input[type="text"],
+.input-container select,
+.input-update-container select,
+.input-container input[type="password"],
+.input-container input[type="file"],
+.input-update-container input[type="file"],
+.input-container input[type="date"],
+.input-update-container input[type="date"],
+.input-container textarea,
+.input-update-container textarea {
+    flex: 1;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    outline: none;
+}
+
+.input-container textarea,.input-update-container textarea  {
+    width: calc(100% - 100px); 
+}
+
+
+
+/* =============SUMMARY=========== */
+
+/* .right-section-statistics{
+    flex-basis: 65%;
+
+} */
+
+.date-range{
+    position: fixed;
+    top:30px;
+    left:380px;
+    display: flex;
+    z-index: 20;
+    display: flex;
+    color:#fff;
+    background: #333;
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+    padding:10px 0;
+    border-radius: 20px;
+
+}
+.date-range .date-range-oneDiv input{
+    padding: 5px;
+    border-radius: 10px;
+    border:none;
+    outline:none;
+    font-size: 20px;
+    width: 150px;
+    text-align: center;
+}
+
+.statistics{
+    position: relative;
+    width:600px;
+    top:100px;
+    left:320px;
+    /* background-color: #fff; */
+    padding:20px 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    height: auto;
+    border: 2px solid #000;
+    background-color: #333;
+    color:white;
+    margin-top:30px;
+}
+
+
+.statistics .single-statistic{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    border-bottom: 2px solid #000;
+}
+
+
+.single-statistic .increase-decrease{
+    display:flex;
+}
+
+.increase-decrease p{
+    color:#fff;
+    font-weight: 900;
+}
+
+
+/* ==========SUBSRIBERS======== */
+
+
+.subs{
+
+    position: relative;
+    width:800px;
+    top:100px;
+    left:320px;
+    /* background-color: #fff; */
+    padding:20px 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    height: auto;
+    
+    background-color: #333;
+    color:white;
+    margin-top:30px;
+    
+
+}
+
+.subs, .total-subs{
+    background-color: #6e6e6e;
+    color:#fff;
+    width: fit-content;
+    padding:3px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 14px;
+}
+.total-subs{
+    background-color: #000;
+    padding:2px 10px;
+}
+
+.table-container{
+    padding:20px;
+    border: 2px solid #000;
+    border-radius: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 2px solid #ddd;
+    padding: 4px;
+    text-align: left;
+}
+
+.back-next-btns{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.back-btn, .next-btn{
+    padding:10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    border:none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.back-btn{
+    color: var(--icons_color);
+}
+
+.next-btn{
+    background-color: var(--buttons_color);
+}
+.next-btn:hover{
+    background-color: #fff;
+    color: #000;
+    border: 2px solid var(--buttons_color);
+}
+
+/* ===========NOTIFICATIONS============ */
+
+.notifications,.crud-your-blogs{
+    position: relative;
+    width:800px;
+    top:100px;
+    left:320px;
+    /* background-color: #fff; */
+    padding:20px 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    height: auto;
+    color:white;
+    margin-top:30px;
+}
+
+.message-notification{
+    display: flex;
+
+}
+
+.single-notification{
+    background:#333;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+.name-of-sender{
+    position: relative;
+    padding-left: 15px;
+    font-size: 20px;
+}
+.name-of-sender::before{
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: var(--buttons_color);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+}
+.date-of-notification,.date-of-publication{
+    color: rgb(194, 190, 190);
+    font-size: 12px;
+    margin-left: 10px;
+    white-space: nowrap; 
+    
+}
+
+.respond-or-delete{
+    display: flex;
+    justify-content: space-evenly;
+    margin:0;
+}
+
+.email-notif,.edit-single-blog{
+    background-color: var(--buttons_color);
+    height: 30px;
+    padding: 0 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.delete-notif,.delete-single-blog{
+    background-color: #fff;
+    height: 30px;
+    padding: 0 20px;
+    border-radius: 10px;
+    cursor: pointer;
+   
+
+}
+.respond-or-delete img,.crud-edit-or-blog img{
+    width: 24px;
+}
+
+.message-notification p{
+    line-height: 24px;
+}
+
+
+
+
+/* =============EDIT BLOG============ */
+
+.single-edit-blog{
+    background:#333;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+}
+
+.blog-title-link{
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.blog-title-link:hover{
+    color: var(--buttons_color);
+}
+
+.single-edit-blog .single-blog{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+   
+}
+
+.crud-edit-or-blog{
+    display: flex;
+    justify-content: space-evenly;
+    margin:0;
+}
+.crud-edit-or-blog>div{
+    margin-right: 50px;
+}
+
+/*  */
+
+.filter-add{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    margin-top:30px;
+    align-items: center;
+}
+.filter-add img{
+    width: 40px;
+    height: 40px;
+}
+.filter-add button{
+    width: 45px;
+    height: 45px;
+    border-radius: 23px;
+    border:none;
+    transition: transform 0.6s;
+    cursor: pointer;
+}
+.filter-add button:hover{
+    transform: scale(1.1);
+}
+</style>
+
+
+        <section class="right-section-notifications">
+            <form action="/search" method="POST" class="search-container">
+                <div class="search">
+                    <img src="./images/icons/search.svg" alt="">
+                    <input type="search" name="searchBlog" id="searchitem" placeholder="Search">
+                 </div>
+                 <button  class="search-btn" type="submit">Search</button>
+                </form>
+            <div class="crud-your-blogs">
+               <div class="filter-add">
+                    <h1>Here are Recent Blogs.</h1>
+                    <a href="/admin/add-blog" class="add-blog-button">Add Blog</a>
+               </div>
+
+            <div class="blog-list-add-update-container">
+
+                <div class="written-blogs-list">
+                        
+                        <% blogs.forEach(blog => { %>
+                        <div class="single-edit-blog">
+                            <div class="single-blog">
+                                <a class="blog-title-link" href="/blog/<%= blog._id %>"><%= blog.title %></a>
+                                <div class="crud-edit-or-blog">
+                                <div>  <a class="edit-single-blog" href="/admin/edit-blog/<%= blog._id %>">EDIT</a></div>
+                                
+                                    <form action="/admin/delete-blog/<%= blog._id %>?_method=DELETE" method="post">
+                                        <input  class="delete-single-blog" type="submit" value="Delete" class="delete_btn">
+                                    </form>
+                                
+                               
+                                </div>      
+                            </div>
+                            <div class="date-of-publication"><%= blog.updatedAt.toLocaleDateString() %></div>
+                        </div>
+                        <% }) %>
+
+                        <div class="back-next-btns">
+                            <button class="back-btn">Back</button>
+                            <button class="next-btn">Next</button>
+                        </div> 
+
+                    </div>
+            </div>
+        </section>
+
