@@ -96,8 +96,17 @@ nav h2 span{
     height: 40px;
 
 }
+.signOut-link{
+    background: #F24E1E;
+    color: #000;
+        text-decoration: none;
+    padding: 3px 20px;
+    border-radius: 30px;
+    border:none;
+    transition: transform 0.6s;
+}
 
-.signIn-link,.more-on-me-link,.hire-me-btn,.more-skills-link,.see-more-portifo,.signOut-link{
+.signIn-link,.more-on-me-link,.hire-me-btn,.more-skills-link,.see-more-portifo{
     color: #000;
     background: #bcfd4c;
     text-decoration: none;

@@ -8,7 +8,8 @@ const {homepage,getBlogById,
     loginUser,
     authMiddleware,
     adminLoginForm,
-    loginAdmin
+    loginAdmin,
+    logout
 } = require('../controllers/controllers');
 
 
@@ -16,8 +17,8 @@ const {homepage,getBlogById,
 
 
 
-router.get('/', homepage);
-router.get('/blog/:id', getBlogById);
+router.get('/',  authMiddleware,homepage);
+router.get('/blog/:id',authMiddleware, getBlogById);
 
 // register user
 router.get('/register', registrationForm);
@@ -39,6 +40,10 @@ router.post('/adminLogin', loginAdmin);
 
 
 // search
+
+
+// logout
+router.get('/logout', logout);
 
 
 

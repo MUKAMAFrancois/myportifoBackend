@@ -26,8 +26,12 @@
                  <li><a href="#my-portifolio">Portifolio</a></li>
                  <li><a href="#my-blogs">Blogs</a></li>
                  <li><a href="#contact">Contact</a></li>
-                <button class="signIn-link"> <a href="/register" >Sign In</a></button>
-                <button class="signOut-link"  style="display:none"> <a href="./login.html" >Sign out</a></button>
+
+                 <% if (isAuthenticated) { %>
+                    <button class="signOut-link"> <a href="./logout" >Sign out</a></button>
+                <% } else { %>
+                    <button class="signIn-link"> <a href="/register" >Sign In</a></button>
+                <% } %>
                 <i class="fa-regular fa-circle-xmark" onclick="clickingX_Symbolmenu()"></i>
              </ul>
              <i class="fa-solid fa-bars" onclick="openMenu()"></i>

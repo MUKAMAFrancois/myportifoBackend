@@ -14,14 +14,17 @@ const jwtSecret=process.env.JWT_SECRET;
 const authMiddleware = (req, res, next) => {
     const token = req.cookies.token;
     if (!token) {
-        return res.status(401).send('Not authorized');
+        res.locals.isAuthenticated = false;
+        next();
     }
     try {
         const data = jwt.verify(token, jwtSecret);
-        req.email = data.email;
+        req.username = data.username;
+        res.locals.isAuthenticated = true;
         next();
     } catch (err) {
-        return res.status(401).send('Not authorized');
+        res.locals.isAuthenticated = false;
+        next();
     }
 }
 
@@ -168,6 +171,11 @@ const loginAdmin = async (req, res) => {
 }
 
 
+const logout = async (req, res) => {
+    res.clearCookie('token');
+    res.redirect('/login');
+}
+
 
 module.exports = {homepage,getBlogById,
     registrationForm,
@@ -176,7 +184,8 @@ module.exports = {homepage,getBlogById,
     loginUser,
     authMiddleware,
     adminLoginForm,
-    loginAdmin
+    loginAdmin,
+    logout
 }
 
 
@@ -189,35 +198,35 @@ module.exports = {homepage,getBlogById,
 
 // const blogData=[
 //     {
-//         "title": "Advanced React Patterns",
+//         "title": "React Hooks",
 //         "image": "https://th.bing.com/th/id/OIP.U-Lw71ugoK-7wjiS3AGFcAHaHa?w=1080&h=1080&rs=1&pid=ImgDetMain",
 //         "description": "Explore advanced patterns and techniques in React for building complex UIs.",
 //         "typeOfBlog": "Tutorial",
 //         "author": "Sarah Johnson"
 //     },
 //     {
-//         "title": "Scaling Node.js Applications",
+//         "title": "The future of AI",
 //         "image": "https://th.bing.com/th/id/OIP.oie2WFth9JcbmvaWJZPmugHaE8?w=900&h=600&rs=1&pid=ImgDetMain",
 //         "description": "Learn strategies for scaling Node.js applications to handle high traffic loads.",
 //         "typeOfBlog": "Tips & Tricks",
 //         "author": "Michael Brown"
 //     },
 //     {
-//         "title": "The Importance of Testing in Software Development",
+//         "title": "Software Testing",
 //         "image": "https://th.bing.com/th/id/OIP.Hzg4-_3TX3sz2X39jyNpAwHaEM?w=1200&h=680&rs=1&pid=ImgDetMain",
 //         "description": "Understand why testing is crucial in software development and learn best practices.",
 //         "typeOfBlog": "Educational",
 //         "author": "Emily Chen"
 //     },
 //     {
-//         "title": "Building RESTful APIs with Express",
+//         "title": "Solid WOrks 2021",
 //         "image": "https://th.bing.com/th/id/OIP.EF61zyaZXQSqXFcNOoyNrAHaE8?w=1000&h=667&rs=1&pid=ImgDetMain",
 //         "description": "Learn how to create RESTful APIs using Express.js for your web applications.",
 //         "typeOfBlog": "Tutorial",
 //         "author": "David Lee"
 //     },
 //     {
-//         "title": "The Rise of Progressive Web Apps",
+//         "title": "Progressive Web Apps",
 //         "image": "https://th.bing.com/th/id/OIP.vdGWOdKCs4PEAd3yOxQcqAHaEK?rs=1&pid=ImgDetMain",
 //         "description": "Discover the benefits of progressive web apps and how to build them.",
 //         "typeOfBlog": "Opinion",
